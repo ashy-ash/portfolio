@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+/* ── FONTS ── */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #A9D8EC;
+    --pink: #F98A8A;
+    --dark: #1a1a1a;
+    --white: #fff;
+}
+
+body {
+    background: var(--white);
+    overflow-x: hidden;
+    font-family: 'Syne', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Syncopate', sans-serif;
+}
+
+/* ── NAV ── */
+nav {
+    position: fixed;
+    inset: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.1rem 2rem;
+    background: var(--blue);
+    z-index: 100;
+}
+
+nav a {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--dark);
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+.nav-logo {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2.2rem;
+    color: var(--dark);
+    line-height: 1;
+    user-select: none;
+}
+
+/* ── HERO ── */
+.hero {
+    height: 50vh;
+    min-height: 500px;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+}
+
+.cat-wrap {
+    width: 540px;
+    max-width: 88vw;
+    flex-shrink: 0;
+    transform: translateY(13%);
+    position: relative;
+}
+
+#cat {
+    display: block;
+    width: 100%;
+    /* viewBox 0 0 267 204 — aspect ratio preserved automatically */
+}
+
+/* Eye blink — applied to each eye group */
+.eye-l,
+.eye-r {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: blink 5.5s ease-in-out infinite;
+}
+
+.eye-r {
+    animation-delay: 0.08s;
+}
+
+@keyframes blink {
+
+    0%,
+    87%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    91% {
+        transform: scaleY(0.04);
+    }
+
+    94% {
+        transform: scaleY(1);
+    }
+}
+
+/* ── CONTENT ── */
+.content {
+    background: var(--white);
+    text-align: center;
+    padding: 4.5rem 1.5rem 6rem;
+
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ashley {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(4rem, 11vw, 8.5rem);
+    color: var(--dark);
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.full-name {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1rem, 2.2vw, 1.6rem);
+    color: var(--dark);
+    letter-spacing: 0.18em;
+    margin-top: 0.8rem;
+}
+
+.bio {
+    padding: 0px 0 200px;
+}
+
+.bio p {
+    margin: 2.8rem auto 0;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--dark);
+    color: #020101;
+    text-align: center;
+    font-family: Syne;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+
+}
